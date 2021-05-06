@@ -27,7 +27,7 @@ pipeline {
         stage('Code Checkout') {
             steps {
                 checkout([
-                    $class: '', 
+                    $class: 'GitSCM', 
                     branches: [[name: '*/main']], 
                     userRemoteConfigs: [[url: 'https://github.com/spring-projects/spring-petclinic.git']]
                 ])
